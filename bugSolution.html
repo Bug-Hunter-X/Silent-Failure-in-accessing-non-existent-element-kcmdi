@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    const element = document.getElementById("myDiv");
+    if (element) {
+      element.innerHTML = "This text is updated";
+    } else {
+      console.error("Element with id 'myDiv' not found!");
+    }
+
+    const nonExistentElement = document.getElementById("myNonExistentDiv");
+    if (nonExistentElement) {
+        nonExistentElement.innerHTML = "This text will not be visible";
+    } else {
+        console.error("Element with id 'myNonExistentDiv' not found!");
+    }
+  </script>
+</body>
+</html>
